@@ -221,12 +221,11 @@ a {
 	
 	@media screen and (max-width: 768px) {
 		width: 100%;
-		background: rgba(249, 215, 39, 0.83) no-repeat center;
+        height: calc(0.57 * 100vw);
         transition: none;
 	}
 
 	@media screen and (max-width: 576px) {
-		height: 280px;
 		padding: 10px;
 	}
 }
@@ -241,32 +240,35 @@ a {
 	}
 }
 
+.projects__project-text {
+	display: none;
+}
+
 .projects__project:hover .projects__project-text {
-    visibility: visible;
+    display: block;
+
+    @media screen and (max-width: 768px) {
+		display: none;
+	}
+}
+
+.projects__project--4 .projects__project-text,
+.projects__project--4:hover .projects__project-text { 
+    @media screen and (max-width: 768px) {
+		display: block;
+	}
 }
 
 .projects__project--1 {
 	background-image: url("images/project screens/food-order.png");
-
-	@media screen and (max-width: 768px) {
-        background-image: linear-gradient(to bottom right, rgb(239 193 29 / 90%), rgb(235 209 79 / 90%)); 
-	}
 }
 
 .projects__project--2 {
   background-image: url("images/project screens/projects.png");
-
-	@media screen and (max-width: 768px) {
-		background-image: linear-gradient(to bottom right, rgb(239 193 29 / 90%), rgb(235 209 79 / 90%)); 
-	}
 }
 
 .projects__project--3 {
   background-image: url("images/project screens/snake.png");
-
-	@media screen and (max-width: 768px) {
-		background-image: linear-gradient(to bottom right, rgb(239 193 29 / 90%), rgb(235 209 79 / 90%));
-	}
 }
 
 .projects__project--4 {
@@ -281,10 +283,8 @@ a {
 .projects__project--1:hover,
 .projects__project--2:hover,
 .projects__project--3:hover {
-    background-image: linear-gradient(to bottom right, rgb(239 193 29 / 90%), rgb(235 209 79 / 90%));
-
-    @media screen and (max-width: 768px) {
-		background: rgb(237, 179, 55) no-repeat center;
+    @media screen and (min-width: 769px) {
+        background-image: linear-gradient(to bottom right, rgb(239 193 29 / 90%), rgb(235 209 79 / 90%));
 	}
 }
 
@@ -293,14 +293,6 @@ a {
 
     @media screen and (max-width: 768px) {
 		background-image: none;
-	}
-}
-
-.projects__project-text {
-	visibility: hidden;
-
-	@media screen and (max-width: 768px) {
-		visibility: visible;
 	}
 }
 
